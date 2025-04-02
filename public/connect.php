@@ -29,6 +29,7 @@ if (isset($_POST['buttLogin'])) {
         $_SESSION['nom_user'] =  $user->nom;
         $_SESSION['id_user'] =  $user->id;
         header("location:" . BASE_URL . "/public/admin/gestion.php");
+        exit();
     }
 }
 
