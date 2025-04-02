@@ -24,6 +24,7 @@ if (isset($_POST['buttLogin'])) {
     if (!$user) {
         $message = 'Nom d\'utilisateur ou mot de passe incorrect';
     } else {
+        //si authentification correcte, on stocke son nom et id dans des variables de session et on redirige vers le dashboard
         $_SESSION['nom_user'] =  $user->nom;
         $_SESSION['id_user'] =  $user->id;
         header("location:" . BASE_URL . "/public/admin/gestion.php");
