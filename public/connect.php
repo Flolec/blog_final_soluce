@@ -9,6 +9,7 @@ use Blog\UserRepository;
 //si l'utilisateur est connecté, on redirige vers son dashboard
 if (isset($_SESSION['nom_user'])) {
     header("location:" . BASE_URL . "/public/admin/gestion.php");
+    exit();
 }
 
 
